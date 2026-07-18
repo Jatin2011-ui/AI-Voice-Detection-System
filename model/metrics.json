@@ -1,0 +1,36 @@
+{
+  "accuracy": 0.9804329725228976,
+  "precision": 0.9705641864268193,
+  "recall": 0.9908180300500835,
+  "f1_score": 0.9805865344898802,
+  "confusion_matrix": [
+    [
+      1168,
+      36
+    ],
+    [
+      11,
+      1187
+    ]
+  ],
+  "feature_dims": 811,
+  "audio_dims": 43,
+  "bert_dims": 768,
+  "dataset_info": {
+    "audio_files": {
+      "total": 228,
+      "real": 130,
+      "fake": 98
+    },
+    "kaggle_csv": {
+      "total": 11778,
+      "real": 5889,
+      "fake": 5889
+    },
+    "combined": {
+      "total": 12006,
+      "real": 6019,
+      "fake": 5987
+    }
+  }
+}

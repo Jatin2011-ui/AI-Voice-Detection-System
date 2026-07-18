@@ -1,0 +1,71 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# .gitignore — AI Voice Authenticity Detector
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── Jupyter / IPython ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Model artifacts (large binary — regenerate with train_model.py) ───────────
+model/voice_detector.pkl
+
+# ── Dataset audio files (too large for Git — use Kaggle/local storage) ────────
+dataset/Real/
+dataset/Fake/
+dataset/KAGGLE/
+dataset/DEMONSTRATION/
+dataset/real_or_fake_voice/
+dataset/Speech Dataset of Human and AI-Generated Voices/
+
+# Audio file extensions — belt-and-suspenders safety net
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.aac
+*.m4a
+
+# Keep CSVs — they are small metadata files:
+!dataset/Dataset.csv
+!dataset/KAGGLE/DATASET-balanced.csv
+
+# ── Streamlit cache ───────────────────────────────────────────────────────────
+.streamlit/
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDEs ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Temp / logs ───────────────────────────────────────────────────────────────
+*.log
+*.tmp
+tmp/
+temp/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env
+.env.local
