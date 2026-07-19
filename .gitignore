@@ -25,7 +25,7 @@ env/
 *.ipynb
 
 # ── Model artifacts (large binary — regenerate with train_model.py) ───────────
-model/voice_detector.pkl
+#model/voice_detector.pkl
 
 # ── Dataset audio files (too large for Git — use Kaggle/local storage) ────────
 dataset/Real/
