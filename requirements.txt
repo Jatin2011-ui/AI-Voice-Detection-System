@@ -13,8 +13,7 @@
 streamlit>=1.32.0
 
 # ── Optional: Microphone recording in browser ─────────────────────────────────
-# Uncomment to enable "Record from Microphone":
-# streamlit-mic-recorder>=0.0.4
+streamlit-mic-recorder>=0.0.4
 
 # ── Machine Learning ──────────────────────────────────────────────────────────
 scikit-learn>=1.4.0
@@ -23,9 +22,9 @@ joblib>=1.3.0
 # ── Deep Learning / NLP (BERT) ────────────────────────────────────────────────
 # DistilBERT for text encoding (hybrid Audio+Language model)
 transformers>=4.36.0
-torch>=2.0.0          # CPU-only install (no GPU required)
-# For CPU-only PyTorch (smaller download, ~200MB vs 2GB):
-#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# CPU-only PyTorch (~200 MB, no GPU needed — required by Whisper & BERT)
+torch>=2.0.0
+--extra-index-url https://download.pytorch.org/whl/cpu
 
 # ── Audio Processing ──────────────────────────────────────────────────────────
 librosa>=0.10.1
@@ -40,6 +39,5 @@ matplotlib>=3.7.0
 
 # ── Speech-to-Text ────────────────────────────────────────────────────────────
 openai-whisper>=20231117
-ffmpeg-python>=0.2.0    # Python wrapper; you ALSO need FFmpeg binary (see README)
-# FFmpeg binary for Windows: https://ffmpeg.org/download.html
-# Add ffmpeg/bin to your PATH after installation.
+# FFmpeg binary is installed via packages.txt (HF Spaces / Ubuntu apt).
+# On Windows locally: https://ffmpeg.org/download.html — add ffmpeg/bin to PATH.
