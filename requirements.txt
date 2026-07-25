@@ -1,43 +1,13 @@
-# ─────────────────────────────────────────────────────────────────────────────
-# requirements.txt
-# AI Voice Authenticity Detector
-#
-# Install all dependencies with:
-#   pip install -r requirements.txt
-#
-# NOTE: On Windows, soundfile and librosa require the Visual C++ Redistributable.
-#       https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
-# ─────────────────────────────────────────────────────────────────────────────
-
-# ── Web Framework ─────────────────────────────────────────────────────────────
 streamlit>=1.32.0
-
-# ── Optional: Microphone recording in browser ─────────────────────────────────
 streamlit-mic-recorder>=0.0.4
-
-# ── Machine Learning ──────────────────────────────────────────────────────────
 scikit-learn>=1.4.0
 joblib>=1.3.0
-
-# ── Deep Learning / NLP (BERT) ────────────────────────────────────────────────
-# DistilBERT for text encoding (hybrid Audio+Language model)
 transformers>=4.36.0
-# CPU-only PyTorch (~200 MB, no GPU needed — required by Whisper & BERT)
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.1.2+cpu
-
-# ── Audio Processing ──────────────────────────────────────────────────────────
+torch==2.12.1+cpu
 librosa>=0.10.1
-soundfile>=0.12.1       # backend for librosa WAV reading
+soundfile>=0.12.1
 numpy>=1.24.0
-
-# ── Data Handling ─────────────────────────────────────────────────────────────
 pandas>=2.0.0
-
-# ── Visualizations ────────────────────────────────────────────────────────────
 matplotlib>=3.7.0
-
-# ── Speech-to-Text ────────────────────────────────────────────────────────────
 openai-whisper>=20231117
-# FFmpeg binary is installed via packages.txt (HF Spaces / Ubuntu apt).
-# On Windows locally: https://ffmpeg.org/download.html — add ffmpeg/bin to PATH.
